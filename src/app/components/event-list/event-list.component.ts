@@ -5,7 +5,7 @@ import {EventManageService} from '../../event-manage.service';
   selector: 'app-event-list',
   templateUrl: './event-list.component.html',
   styleUrls: ['./event-list.component.css'],
-  providers: [ EventManageService ]
+  providers: [ ]
 
 })
 export class EventListComponent implements OnInit {

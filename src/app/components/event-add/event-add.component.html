@@ -1,5 +1,9 @@
 <p>list of events</p>
 
-<input type="text" placeholder="When" [(ngModel)]="eventTime" (keydown.enter)="submitEvent()">
+
+
+
+
+<input type="text" placeholder="When" [(ngModel)]="eventTime" (keydown.enter)="submitEvent()" [defaultValue]="eventTimeValue">
 <input type="text" placeholder="What" [(ngModel)]="eventName" (keydown.enter)="submitEvent()">
 <!--<p *ngFor="let item of arraySm">{{item}}</p>-->

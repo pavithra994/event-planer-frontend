@@ -5,13 +5,14 @@ import {EventManageService} from '../../event-manage.service';
   selector: 'app-event-add',
   templateUrl: './event-add.component.html',
   styleUrls: ['./event-add.component.css'],
-  providers: [ EventManageService ]
+  providers: [ ]
 })
 export class EventAddComponent implements OnInit {
   eventTime: string;
   eventName: string;
   eventArray: string;
   allEvents: any;
+  eventTimeValue = 'x';
 
   constructor(private eventManageService: EventManageService) {} // here we call the services
 
@@ -19,11 +20,14 @@ export class EventAddComponent implements OnInit {
     this.eventManageService.getInstance().subscribe(value => {
       console.log(value);
       this.allEvents = value;
+      this.eventTimeValue = 'y';
     });
   }
 
   getEventNameAndTime() {
     this.eventManageService.addEvent(this.eventTime, this.eventName);
+    this.eventTimeValue = '';
+
   }
 
   submitEvent() {

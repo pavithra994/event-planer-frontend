@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "event-planer-frontend"
+    }
+  },
+  "defaultProject": "event-planer-frontend",
+  "cli": {
+    "analytics": false
+  }
 }
