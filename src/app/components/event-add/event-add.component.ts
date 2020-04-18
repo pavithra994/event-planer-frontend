@@ -11,12 +11,14 @@ export class EventAddComponent implements OnInit {
   eventTime: string;
   eventName: string;
   eventArray: string;
+  allEvents: any;
 
   constructor(private eventManageService: EventManageService) {} // here we call the services
 
   ngOnInit(): void {
     this.eventManageService.getInstance().subscribe(value => {
       console.log(value);
+      this.allEvents = value;
     });
   }
 
@@ -28,9 +30,9 @@ export class EventAddComponent implements OnInit {
     this.getEventNameAndTime();
   }
 
-  getEventList() {
-    const val = JSON.stringify(this.eventManageService.getEventList());
-    this.eventArray = val;
-    console.log(val);
-  }
+  // getEventList() {
+  //   const val = JSON.stringify(this.eventManageService.getEventList());
+  //   this.eventArray = val;
+  //   console.log(val);
+  // }
 }

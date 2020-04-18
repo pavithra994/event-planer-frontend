@@ -16,14 +16,15 @@ export class EventListComponent implements OnInit {
   ngOnInit(): void {
     this.eventManageService.getInstance().subscribe(value => {
       console.log(value);
+      this.eventArray = value;
     });
   }
-  updateEventList(){
-    this.eventManageService.getInstance().subscribe(value => {
-      console.log(value);
-    });
-    this.eventArray = this.eventManageService.getEventList();
-    console.log(this.eventArray);
-
-  }
+  // updateEventList(){
+  //   // this.eventManageService.getInstance().subscribe(value => {
+  //   //   console.log(value);
+  //   // });
+  //   this.eventArray = this.eventManageService.getEventList();
+  //   console.log(this.eventArray);
+  //
+  // }
 }
