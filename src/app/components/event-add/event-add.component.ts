@@ -12,7 +12,6 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 export class EventAddComponent implements OnInit {
   eventTime: any;
   eventName: string;
-  eventArray: string;
   allEvents: any;
   eventTimeValue = 'x';
   // eventTime1: any;

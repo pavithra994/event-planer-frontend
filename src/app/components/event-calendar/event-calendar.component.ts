@@ -30,7 +30,7 @@ export class EventCalendarComponent implements OnInit {
       // const highlightDate = this.datesToHighlight
       //   .map(strDate => new Date(strDate))
       //   .some(d => d.getDate() === date.getDate() && d.getMonth() === date.getMonth() && d.getFullYear() === date.getFullYear());
-      const highlightDate = this.eventArray
+      const highlightDate = this.eventManageService.getEventList()
         .map(strDate => strDate.eventTime)
         .some(d => d.getDate() === date.getDate() && d.getMonth() === date.getMonth() && d.getFullYear() === date.getFullYear());
       return highlightDate ? 'special-date' : '';

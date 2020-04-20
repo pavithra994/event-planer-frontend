@@ -1,21 +1,42 @@
 <section>
-  <div>
-    header
+  <div class="jumbotron">
+    <h1 class="card-header">Event Organizer</h1>
   </div>
 
-  <div>
-    <app-event-calendar>
-    </app-event-calendar>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="container card">
+          <app-event-calendar>
+          </app-event-calendar>
+        </div>
+      </div>
+      <div class="col">
+        <div class="row">
+          <div class="col">
+            <div class="container">
+              <app-event-add>
+              </app-event-add>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <app-event-list>
+            </app-event-list>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div>
-    <app-event-add>
-    </app-event-add>
-  </div>
+
+
+
+
 
   <div>
-    <app-event-list>
-    </app-event-list>
+
   </div>
 
   <div>

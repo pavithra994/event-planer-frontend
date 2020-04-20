@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {EventManageService} from '../../event-manage.service';
+import {MatCalendarCellCssClasses} from '@angular/material/datepicker';
 
 @Component({
   selector: 'app-event-list',
@@ -27,4 +28,18 @@ export class EventListComponent implements OnInit {
   //   console.log(this.eventArray);
   //
   // }
+
+  dateClass() {
+    // tslint:disable-next-line:variable-name
+    return (date_m: Date): MatCalendarCellCssClasses => {
+      const date = new Date(date_m)
+      // const highlightDate = this.datesToHighlight
+      //   .map(strDate => new Date(strDate))
+      //   .some(d => d.getDate() === date.getDate() && d.getMonth() === date.getMonth() && d.getFullYear() === date.getFullYear());
+      const highlightDate = this.eventManageService.getEventList()
+        .map(strDate => strDate.eventTime)
+        .some(d => d.getDate() === date.getDate() && d.getMonth() === date.getMonth() && d.getFullYear() === date.getFullYear());
+      return highlightDate ? 'special-date' : '';
+    };
+  }
 }
