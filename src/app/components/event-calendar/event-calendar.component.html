@@ -1,8 +1,7 @@
 <div>
-  <div class="calendar-wrapper">
-    <mat-calendar #calendar [dateClass]="dateClass()"  [(selected)]="selectedDate">
+  <div class="calendar-wrapper" *ngIf="!loadingItem">
+    <mat-calendar #calendar [dateClass]="dateClass" [(selected)]="selectedDate">
     </mat-calendar>
-
   </div>
 </div>
 <!--[dateClass]="dateClass()"-->

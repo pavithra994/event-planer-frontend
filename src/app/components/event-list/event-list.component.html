@@ -1,15 +1,22 @@
 <div>
 <!--  <button (click)="updateEventList()">-</button>-->
 
-  <table>
+  <table class="table">
+    <thead class="thead-dark">
     <tr>
-      <th>Date</th>
-      <th>Event</th>
+      <th style="width: 25%">Date</th>
+      <th style="width: 75%">Event</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngIf="eventArray == ''">
+      <td colspan="2">No events</td>
     </tr>
     <tr *ngFor="let ev of eventArray">
-      <td>{{ev.eventTime.toString()}}</td>
-      <td>{{ev.eventName}}</td>
+      <td  style="width: 25%">{{ev.eventTime.toDateString()}}</td>
+      <td  style="width: 75%">{{ev.eventName}}</td>
     </tr>
+    </tbody>
   </table>
 
 
