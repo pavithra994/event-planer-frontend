@@ -17,10 +17,10 @@ export class EventManageService {
     return this.eventSource;
   }
   // tslint:disable-next-line:variable-name
-  addEvent(event_time: string, event_name: string){
+  addEvent(event_time: any, event_name: string){
     const eventData = {
       eventName: event_name,
-      eventTime: event_time
+      eventTime: new Date(event_time)
     };
     this.eventArray.push(eventData);
     this.eventSource.next(this.eventArray);

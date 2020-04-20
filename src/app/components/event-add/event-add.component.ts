@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {EventManageService} from '../../event-manage.service';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 
 @Component({
   selector: 'app-event-add',
@@ -8,11 +10,12 @@ import {EventManageService} from '../../event-manage.service';
   providers: [ ]
 })
 export class EventAddComponent implements OnInit {
-  eventTime: string;
+  eventTime: any;
   eventName: string;
   eventArray: string;
   allEvents: any;
   eventTimeValue = 'x';
+  // eventTime1: any;
 
   constructor(private eventManageService: EventManageService) {} // here we call the services
 

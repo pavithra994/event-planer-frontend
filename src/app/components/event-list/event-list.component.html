@@ -1,5 +1,16 @@
 <div>
 <!--  <button (click)="updateEventList()">-</button>-->
 
-  <p *ngFor="let e of eventArray">{{e.eventTime}} | {{e.eventName}}</p>
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Event</th>
+    </tr>
+    <tr *ngFor="let ev of eventArray">
+      <td>{{ev.eventTime.toString()}}</td>
+      <td>{{ev.eventName}}</td>
+    </tr>
+  </table>
+
+
 </div>

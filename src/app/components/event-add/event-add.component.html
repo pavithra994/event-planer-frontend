@@ -2,8 +2,19 @@
 
 
 
+<mat-form-field>
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="picker" [(ngModel)]="eventTime">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<mat-form-field>
+<mat-label>What is the event</mat-label>
+  <input matInput type="text" placeholder="What" [(ngModel)]="eventName" (keydown.enter)="submitEvent()">
+</mat-form-field>
+<!--<input type="text" placeholder="When" [(ngModel)]="eventTime" (keydown.enter)="submitEvent()" [defaultValue]="eventTimeValue">-->
+<!--<input type="text" placeholder="What" [(ngModel)]="eventName" (keydown.enter)="submitEvent()">-->
 
 
-<input type="text" placeholder="When" [(ngModel)]="eventTime" (keydown.enter)="submitEvent()" [defaultValue]="eventTimeValue">
-<input type="text" placeholder="What" [(ngModel)]="eventName" (keydown.enter)="submitEvent()">
 <!--<p *ngFor="let item of arraySm">{{item}}</p>-->
